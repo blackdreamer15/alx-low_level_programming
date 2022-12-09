@@ -2,7 +2,7 @@
 
 /**
  * main - Entry point
- * Description: prints a string to the console: "Programming is like building a multilingual puzzle
+ * Description: prints: "Programming is like building a multilingual puzzle
  * Return: 0
  */
 int main(void)
