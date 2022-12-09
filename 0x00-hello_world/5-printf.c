@@ -1,7 +1,6 @@
 #include <stdio.h>
 /**
- * main - Entry point
- * Description:print: with proper grammar, but the outcome is a piece of art,\n
+ * main - prints: with proper grammar, but the outcome is a piece of art,\n
  * Return: 0
  */
 int main(void)
