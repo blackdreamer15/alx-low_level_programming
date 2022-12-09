@@ -16,7 +16,7 @@ int firstDigit_n1;
 int firstDigit_n2;
 /*Initialization of last digits*/
 int lastDigit_n1;
-int lasttDigit_n2;
+int lastDigit_n2;
 for (counter1 = 0; counter1 < 99; counter1++)
 {
 firstDigit_n1 = (counter1 / 10 + '0');
