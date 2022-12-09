@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
- * main - Entry point of the program
- * Return: 0
+ * main - Prints sizes of some data types
+ * Return: 0 (success)
  */
 int main(void)
 {
