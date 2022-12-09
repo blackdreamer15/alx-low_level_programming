@@ -8,7 +8,7 @@
  * The two digits must be different 01 and 10 are
  * considered the same combination of the two
  * digits 0 and 1
- Print only the smallest combination of two digits
+ * Print only the smallest combination of two digits
  * Numbers should be printed in ascending order,
  * with two digits
  * You can only use the putchar function (every other
