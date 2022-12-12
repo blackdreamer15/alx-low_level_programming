@@ -30,7 +30,7 @@ if (counter1 < counter2)
 putchar(firstDigit_n1);
 putchar(lastDigit_n1);
 putchar(' ');
-putchar(firstDigit_n1);
+putchar(firstDigit_n2);
 putchar(lastDigit_n2);
 if (counter1 != 98)
 {
