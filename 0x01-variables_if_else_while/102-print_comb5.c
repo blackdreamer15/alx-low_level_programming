@@ -7,8 +7,8 @@
  * The numbers ranges from 0 to 99 and are separated by a space.
  * All numbers are printed with two digits. 1 should be printed as 01.
  * The combination of numbers is separated by comma, followed by a space and
- * printed in ascending order.
- * 00 01 and 01 00 are considered as the same combination of the numbers 0 and 1.
+ * printed in ascending order. 00 01 and 01 00 are considered as the same
+ * combination of the numbers 0 and 1.
  * This is performed using putchar only for a maximum of 8 times.
  * Return: Always 0 (Success)
  */
