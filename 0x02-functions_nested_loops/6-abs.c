@@ -9,8 +9,6 @@
 
 int _abs(int num)
 {
-	int absOfNum;
-
 	if (num < 0)
 		return(-num);
 	else
