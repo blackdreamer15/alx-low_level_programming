@@ -1,8 +1,10 @@
 #include "main.h"
 
 /**
- * Description - Print all letters of the alphabet in lowercase
- * 10 times each followed by a new line
+ * print_alphabet_x10 - A function that prints all letters
+ * of the alphabet in lowercase 10 times each followed by a new line
+ *
+ * Return - void
  */
 
 void print_alphabet_x10(void)
