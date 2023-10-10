@@ -1,4 +1,4 @@
-vim #include "main.h"
+#include "main.h"
 
 /**
  * add -  A function to add two numbers
