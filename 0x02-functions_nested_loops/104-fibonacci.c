@@ -30,7 +30,7 @@ int main(void)
 		printf("%lu, ", next_term);
 
 		first_term = second_term;
-		second_term = third_term;
+		second_term = next_term;
 	}
 	printf("\n");
 
