@@ -25,7 +25,7 @@ int main(void)
 		sum = sum + (i * num1);
 	}
 
-	for (j = 0; (j * num2) < 1024);
+	for (j = 0; (j * num2) < 1024; j++);
 	{
 		if ((j * num2) % 3 != 0)
 			sum = sum + (j * num2);
