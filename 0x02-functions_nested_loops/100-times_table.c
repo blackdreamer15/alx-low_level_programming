@@ -1,13 +1,5 @@
 #include "main.h"
 
-/**
- * print_result - Function to prrint to the stdout
- *
- * @result: Value after multiplying
- * @j: Current iteration value
- */
-void print_result(int result, int j);
-
 /*
  * print_times_table - A function that prints the n times table,
  * starting with 0
@@ -15,27 +7,28 @@ void print_result(int result, int j);
  */
 void print_times_table(int n)
 {
-	int i;
-	int j;
-	int total;
+	int i, j, result = 0;
 
 	if (n >= 0 && n <= 15)
 	{
-		for (i = 0; i < n + 1; i++)
+		for (i = 0; i <= n; i++)
 		{
-			for (j = 0; j < n + 1; j++)
+			for (j = 0; j <= n; j++)
 			{
-				total = i * j;
+				result = i * j;
 
-				print_result(total, j);
-
-				if (j < n)
+				if (j == 0)
+					printf("%d, ", result);
+				else
 				{
-					_putchar(',');
-					_putchar(' ');
+					printf("%3d", result);
+					
+					if (j != n)
+					{
+						printf(", ");
 				}
 			}
-			_putchar('\n');
+			printf("\n");
 		}
 	}
 }
