@@ -6,16 +6,13 @@
  * @result: Value after multiplying
  * @j: Current iteration value
  */
- 
 void print_result(int result, int j);
 
-
 /*
- * print_times_table - The main entry for 100-times_table.c
- * Write a function that prints the n times table, starting with 0
+ * print_times_table - A function that prints the n times table,
+ * starting with 0
  * @n: Value needed to find its multiples
  */
-
 void print_times_table(int n)
 {
 	int i;
