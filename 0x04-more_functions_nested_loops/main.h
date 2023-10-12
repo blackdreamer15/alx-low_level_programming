@@ -1,6 +1,9 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
 
 int _isupper(int c);
 
@@ -19,6 +22,5 @@ void print_line(int n);
 void print_diagonal(int n);
 
 void print_square(int size);
-
 
 #endif
