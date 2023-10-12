@@ -1,9 +1,10 @@
 #include "main.h"
 
 /*
- * print_times_table - A function that prints the n times table,
- * starting with 0
+ * print_times_table - Prints the n times table starting with 0
  * @n: Value needed to find its multiples
+ *
+ * Return: void
  */
 void print_times_table(int n)
 {
@@ -22,11 +23,11 @@ void print_times_table(int n)
 				else
 				{
 					printf("%3d", result);
-					
+
 					if (j != n)
 						printf(", ");
 				}
-			
+			}
 			printf("\n");
 		}
 	}
