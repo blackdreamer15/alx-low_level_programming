@@ -1,17 +1,15 @@
 #include "main.h"
-#include <stdio.h>
 
-/*
- * print_times_table - Prints the n times table starting with 0
- * @n: Value needed to find its multiples
- *
- * Return: void
+/**
+ * print_times_table - prints time table
+ * @n : the time table size
  */
+
 void print_times_table(int n)
 {
 	int i, j, result = 0;
 
-	if (n >= 0 && n <= 15)
+	if (n < 15)
 	{
 		for (i = 0; i <= n; i++)
 		{
@@ -19,17 +17,22 @@ void print_times_table(int n)
 			{
 				result = i * j;
 
-				if (j == 0)
-					printf("%d, ", result);
-				else
-				{
-					printf("%3d", result);
+				if (j <= 0)
+					printf("%d", result);
 
-					if (j != n)
-						printf(", ");
-				}
+				else if ((result < 10))
+					printf("   %d", result);
+
+				else if ((result < 100))
+					printf("  %d", result);
+
+				else
+					printf(" %d", result);
+
+					if (j < n)
+						putchar(',');
 			}
-			printf("\n");
+			putchar('\n');
 		}
 	}
 }
