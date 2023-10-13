@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <math.h>
 
 int _putchar(char letter);
 
@@ -26,5 +27,7 @@ void print_diagonal(int n);
 void print_square(int size);
 
 void print_triangle(int size);
+
+void print_number(int n);
 
 #endif
