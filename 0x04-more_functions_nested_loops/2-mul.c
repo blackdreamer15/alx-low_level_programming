@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * mul - checks if parameter is a digit
+ * mul - Multiply two integers and return result
  * @a: first number
  * @b: second number
  * Return: a*b
