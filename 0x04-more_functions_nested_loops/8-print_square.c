@@ -11,8 +11,6 @@
  */
 void print_square(int size)
 {
-	_putchar('\n');
-
 	int row, col;
 
 	if (size > 0)
