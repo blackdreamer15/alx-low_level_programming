@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <math.h>
 /**
  * main - Entry point
  *
@@ -10,18 +10,32 @@
  */
 int main(void)
 {
-	long number = 612852475143;
-	long i, largest_factor;
+	long int n;
+	long int max;
+	long int i;
 
-	float square_root = sqrt(number);
+	n = 612852475143;
+	max = -1;
 
-	for (i = 1; i <= square_root; i++)
+	while (n % 2 == 0)
 	{
-		if (number % i == 0)
-			largest_factor = number / i;
+		max = 2;
+		n /= 2;
 	}
 
-	printf("%ld\n", largest_factor);
+	for (i = 3; i <= sqrt(n); i = i + 2)
+	{
+		while (n % i == 0)
+		{
+			max = i;
+			n = n / i;
+		}
+	}
+
+	if (n > 2)
+		max = n;
+
+	printf("%ld\n", max);
 
 	return (0);
 }
