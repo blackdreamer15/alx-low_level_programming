@@ -8,3 +8,6 @@
 !*/
 
 ### Above combination will ignore all files without extension ###
+
+# Unignore crackme2
+!crackme2
