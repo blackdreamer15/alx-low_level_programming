@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * main - prints the minimum number of coins to make change for an amount of money.
+ * main - prints the minimum number of coins to
+ *		  make change for an amount of money.
  * @argc: argument count
  * @argv: 1-D argument vector
  * Return: Exit with 0 if success. 1 otherwise.
