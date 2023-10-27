@@ -16,27 +16,28 @@ int main(int argc, char *argv[])
 	char *ptr;
 
 	if (argc < 2)
-	{
 		printf("0\n");
-		return (1);
-	}
-	for (i = 1; i < argc; i++)
+
+	else
 	{
-		ptr = argv[i];
-		len = strlen(argv[i]);
-
-		for (j = 0; j < len; j++)
+		for (i = 1; i < argc; i++)
 		{
-			if (isdigit(ptr[j]) == 0)
-			{
-				printf("Error\n");
-				return (1);
-			}
-		}
-		sum += atoi(argv[i]);
-	}
+			ptr = argv[i];
+			len = strlen(argv[i]);
 
-	printf("%d\n", sum);
+			for (j = 0; j < len; j++)
+			{
+				if (isdigit(ptr[j]) == 0)
+				{
+					printf("Error\n");
+					return (1);
+				}
+			}
+			sum += atoi(argv[i]);
+		}
+
+		printf("%d\n", sum);
+	}
 
 	return (0);
 }
