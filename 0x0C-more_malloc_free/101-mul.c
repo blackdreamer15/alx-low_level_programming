@@ -1,76 +1,88 @@
+#include "main.h"
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
-#include <ctype.h>
+#include <stdlib.h>
 
 /**
- * print_free_and_exit98 - prints Error and exits
- * @result: pointer to array of integers
- * Return: void
+ * multiplier - multiply two big number strings
+ * @s1: the first big number string
+ * @s2: the second big number string
+ * Return: the product big number string
  */
-void print_free_and_exit98(int *result)
+char *multiplier(char *s1, char *s2)
 {
-	printf("Error\n");
-	free(result);
-	exit(98);
+	char *result;
+	int len1, len2, i, j, k, x;
+
+	len1 = strlen(s1);
+	len2 = strlen(s2);
+	result = malloc(i = x = len1 + len2);
+
+	if (!result)
+		printf("Error\n"), exit(98);
+	while (i--)
+		result[i] = 0;
+
+	for (len1--; len1 >= 0; len1--)
+	{
+		if (!isdigit(s1[len1]))
+		{
+			free(result);
+			printf("Error\n"), exit(98);
+		}
+		i = s1[len1] - '0';
+		k = 0;
+
+		for (len2 = strlen(s2) - 1; len2 >= 0; len2--)
+		{
+			if (!isdigit(s2[len2]))
+			{
+				free(result);
+				printf("Error\n"), exit(98);
+			}
+			j = s2[len2] - '0';
+
+			k += result[len1 + len2 + 1] + (i * j);
+			result[len1 + len2 + 1] = k % 10;
+
+			k /= 10;
+		}
+		if (k)
+			result[len1 + len2 + 1] += k;
+	}
+	return (result);
 }
 
 /**
- * print_and_exit98 - prints Error and exits
- * Return: void
- */
-void print_and_exit98(void)
-{
-	printf("Error\n");
-	exit(98);
-}
-
-/**
- * main - multiplies two positive numbers
- * @argc: number of arguments
- * @argv: array of pointers to arguments
+ * main - multiply two big number strings
+ * @argc: the number of arguments
+ * @argv: the argument vector
  *
- * Return: 0 on success, 98 on failure
+ * Return: Always 0 on success.
  */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	int i, j, len1 = strlen(argv[1]), len2 = strlen(argv[2]), len = len1 + len2;
-	int *result;
+	char *result;
+	int i, j, x;
 
 	if (argc != 3)
-		print_and_exit98();
+		printf("Error\n"), exit(98);
 
-	result = calloc(sizeof(*result), len);
-	if (result == NULL)
-		print_and_exit98();
-
-	for (i = len1 - 1; i >= 0; i--)
+	x = strlen(argv[1]) + strlen(argv[2]);
+	result = multiplier(argv[1], argv[2]);
+	j = 0;
+	i = 0;
+	while (j < x)
 	{
-		if (!isdigit(argv[1][i]))
-			print_free_and_exit98(result);
-
-		for (j = len2 - 1; j >= 0; j--)
-		{
-			if (!isdigit(argv[2][j]))
-				print_free_and_exit98(result);
-
-			result[i + j + 1] += (argv[1][i] - '0') * (argv[2][j] - '0');
-			if (result[i + j + 1] > 9)
-			{
-				result[i + j] += result[i + j + 1] / 10;
-				result[i + j + 1] %= 10;
-			}
-		}
+		if (result[j])
+			i = 1;
+		if (i)
+			_putchar(result[j] + '0');
+		j++;
 	}
-	if (*result == 0)
-		i = 1;
-	else
-		i = 0;
-	for (; i < len; i++)
-		printf("%i", result[i]);
-
-	printf("\n");
+	if (!i)
+		_putchar('0');
+	_putchar('\n');
 	free(result);
-
 	return (0);
 }
