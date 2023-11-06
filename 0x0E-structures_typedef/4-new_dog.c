@@ -11,36 +11,39 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *dogCopy;
+	dog_t *max_dog;
+	int name_len = 0, owner_len = 0;
 
-	if (name == NULL || owner == NULL || age < 0)
-		return (NULL);
-
-	dogCopy = malloc(sizeof(dog_t));
-
-	if (dogCopy == NULL)
-		return (NULL);
-
-	dogCopy->name = malloc(sizeof(dogCopy->name) * (strlen(name) + 1));
-
-	if (dogCopy->name == NULL)
+	if (name != NULL && owner != NULL)
 	{
-		free(dogCopy);
-		return (NULL);
+		name_len = strlen(name) + 1;
+		owner_len = strlen(owner) + 1;
+		max_dog = malloc(sizeof(dog_t));
+
+		if (max_dog == NULL)
+			return (NULL);
+
+		max_dog->name = malloc(sizeof(char) * name_len);
+
+		if (max_dog->name == NULL)
+		{
+			free(max_dog);
+			return (NULL);
+		}
+
+		max_dog->owner = malloc(sizeof(char) * owner_len);
+
+		if (max_dog->owner == NULL)
+		{
+			free(max_dog->name);
+			free(max_dog);
+			return (NULL);
+		}
+
+		max_dog->name = _strcpy(max_dog->name, name);
+		max_dog->owner = _strcpy(max_dog->owner, owner);
+		max_dog->age = age;
 	}
 
-	dogCopy->owner = malloc(sizeof(dogCopy->owner) * (strlen(owner) + 1));
-
-	if (dogCopy->owner == NULL)
-	{
-		free(dogCopy->name);
-		free(dogCopy);
-		return (NULL);
-	}
-
-	dogCopy->name = strcpy(dogCopy->name, name);
-	dogCopy->age = age;
-	dogCopy->owner = strcpy(dogCopy->owner, owner);
-
-	return (dogCopy);
+	return (max_dog);
 }
