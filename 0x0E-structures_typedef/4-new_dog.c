@@ -40,8 +40,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 			return (NULL);
 		}
 
-		max_dog->name = _strcpy(max_dog->name, name);
-		max_dog->owner = _strcpy(max_dog->owner, owner);
+		max_dog->name = strcpy(max_dog->name, name);
+		max_dog->owner = strcpy(max_dog->owner, owner);
 		max_dog->age = age;
 	}
 
