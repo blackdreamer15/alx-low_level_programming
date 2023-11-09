@@ -45,7 +45,7 @@ int op_div(int a, int b)
 }
 
 /**
- * op_mod - divides two numbers and returns the remainder (modulo)
+ * op_mod - divides two numbers and returns the remainder
  * @a: first operand
  * @b: second operand
  * Return: remainder of the division of a by b
