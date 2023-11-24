@@ -1,5 +1,4 @@
 #include "main.h"
-#include "main.h"
 
 /**
  * _pow - calculates (base raised to power)
