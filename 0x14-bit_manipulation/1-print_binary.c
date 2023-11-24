@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _pow - calculates (base raised to power)
+ * power_calc - calculates (base raised to power)
  * @base: base of the exponent
  * @power: power of the exponent
  * Return: value of (base rasied to power)
@@ -35,11 +35,11 @@ void print_binary(unsigned long int n)
 		if (check == divisor)
 		{
 			flag = 1;
-			_putchar('1');
+			putchar('1');
 		}
 
 		else if (flag == 1 || divisor == 1)
-			_putchar('0');
+			putchar('0');
 
 		divisor >>= 1;
 	}
