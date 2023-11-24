@@ -9,8 +9,22 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int num;
+	unsigned int num = 0;
+	unsigned int i, len;
 
 	if (b == NULL)
 		return (1);
+
+	len = strlen(b);
+
+	for (i = 0; i < len; i++)
+	{
+		if (b[i] != '0' || b != '1')
+			return (0);
+
+		b <<= 1;
+		num += b[i] - '0';
+	}
+
+	return (num);
 }
