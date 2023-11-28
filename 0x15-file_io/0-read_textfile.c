@@ -34,4 +34,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
   close(fd);
 
   w_len = write(STDOUT_FILENO, buffer, r_len);
+
+  if (w_len != r_len || r_len == -1 || w_len == -1)
+  {
+    free(buffer);
+    return(0);
+  }
+  return (w_len);
 }
