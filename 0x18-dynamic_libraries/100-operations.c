@@ -1,6 +1,3 @@
-#include <stdlib.h>
-#include <stdio.h>
-
 int add(int i, int k);
 int sub(int i, int k);
 int mul(int i, int k);
