@@ -9,6 +9,7 @@
 
 ### Above combination will ignore all files without extension ###
 
-# Unignore crackme2
+# Unignore
 !crackme2
 !101-crackme_password
+!gm
